@@ -1,0 +1,75 @@
+.body {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    height: 50%;
+    width: 360px;
+    background-color: transparent;
+    border: 2px solid rgb(70, 255, 193);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 500px;
+    padding: 5%;
+}
+
+.minute-hand {
+    width: 1%;
+    height: 80%;
+    background: linear-gradient(to bottom, rgb(70, 255, 193) 50%, transparent 50%);
+    animation: minute-rotate 3600s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes minute-rotate {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
+
+.hour-hand {
+    width: 1%;
+    height: 50%;
+    background: linear-gradient(to bottom, rgb(70, 255, 193) 50%, transparent 50%);
+    margin-left: -1%;
+    animation: hour-rotate (3600*60)s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes hour-rotate {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
+
+.second-hand {
+    width: 1%;
+    height: 110%;
+    background: linear-gradient(to bottom, rgb(70, 255, 193) 50%, transparent 50%);
+    margin-left: -1%;
+    animation: second-rotate 60s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes second-rotate {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
